@@ -1,0 +1,103 @@
+Found a 32 line (387 tokens) duplication in the following files: 
+Starting at line 18 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass1.java
+Starting at line 8 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass.java
+
+		rootDirectory = new Directory("root", "admin", new Date(), new Date(), 0);
+		
+		Directory directory1 = new Directory("Dir1", "admin", new Date(), new Date(), 0);
+		Directory directory2 = new Directory("Dir2", "admin", new Date(), new Date(), 0);
+		Directory directory3 = new Directory("Dir3", "admin", new Date(), new Date(), 0);
+		File file1 = new File("File1", "admin", new Date(), new Date(), 9);
+		Link link1 = new Link("Link1", "admin", new Date(), new Date(), 10);
+		
+		fileSystem.addDirectory(directory1, rootDirectory);
+		fileSystem.addDirectory(directory2, rootDirectory);
+		fileSystem.addDirectory(directory3, rootDirectory);
+		fileSystem.addFile(file1, rootDirectory);
+		fileSystem.addLink(link1, rootDirectory);
+		
+		Directory directory11 = new Directory("Dir11", "admin", new Date(), new Date(), 0);
+		Directory directory12 = new Directory("Dir12", "admin", new Date(), new Date(), 0);
+		File file11 = new File("File11", "admin", new Date(), new Date(), 12);
+		File file12 = new File("File12", "admin", new Date(), new Date(), 14);
+		
+		fileSystem.addDirectory(directory11,directory1);
+		fileSystem.addDirectory(directory12,directory1);
+		fileSystem.addFile(file11,directory1);
+		fileSystem.addFile(file12,directory1);
+		
+		File file21 = new File("File21", "admin", new Date(), new Date(), 25);
+		Link link21 = new Link("Link21", "admin", new Date(), new Date(), 10);
+		Link link22 = new Link("Link22", "admin", new Date(), new Date(), 20);
+		fileSystem.addFile(file21, directory2);
+		fileSystem.addLink(link21, directory2);
+		fileSystem.addLink(link22, directory2);
+		
+		fileSystem.setDirectory(rootDirectory);
+=====================================================================
+Found a 11 line (46 tokens) duplication in the following files: 
+Starting at line 63 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass.java
+Starting at line 87 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass.java
+
+		fileSystem.cdExecute();
+		
+		//Use redo command on sub directory  
+		System.out.println("==================================");
+		System.out.println("Use cd command on sub directory");
+		System.out.println("==================================");
+		fileSystem.cdExecute(directory1);
+		
+		//Use pwd command on root directory  
+		System.out.println("==================================");
+		System.out.println("Use pwd command on root directory");
+=====================================================================
+Found a 11 line (44 tokens) duplication in the following files: 
+Starting at line 45 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass.java
+Starting at line 69 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass.java
+
+		fileSystem.lsExecute();
+		
+		//Use pwd command on root directory  
+		System.out.println("==================================");
+		System.out.println("Use pwd command on root directory");
+		System.out.println("==================================");
+		fileSystem.pwdExecute();
+		
+		//Use redo command on root directory  
+		System.out.println("==================================");
+		System.out.println("Use redo command on root directory");
+=====================================================================
+Found a 2 line (29 tokens) duplication in the following files: 
+Starting at line 81 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass1.java
+Starting at line 103 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass1.java
+
+			if(input[1].length() > 0){
+				List<FSElement> children = fileSystem.getDirectory().getChildren();
+=====================================================================
+Found a 2 line (29 tokens) duplication in the following files: 
+Starting at line 7 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/File.java
+Starting at line 12 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/Directory.java
+
+	public File(String name, String owner, Date createddate, Date lastModified, int size) {
+		super(name, owner, createddate, lastModified, size);
+=====================================================================
+Found a 7 line (28 tokens) duplication in the following files: 
+Starting at line 61 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass.java
+Starting at line 79 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/TestClass.java
+
+		System.out.println("Use cd command on root directory");
+		System.out.println("==================================");
+		fileSystem.cdExecute();
+		
+		//Use redo command on sub directory  
+		System.out.println("==================================");
+		System.out.println("Use cd command on sub directory");
+=====================================================================
+Found a 4 line (27 tokens) duplication in the following files: 
+Starting at line 97 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/FileSystem.java
+Starting at line 133 of /Users/manojchappidi/Documents/Java/HW16-2/src/com/hw/FileSystem.java
+
+	public void showAllElements(FSElement element){
+		if (element instanceof Directory) {
+			System.out.println(element); // for print element
+			Directory directory = (Directory) element;

@@ -1,0 +1,12 @@
+Found a 8 line (30 tokens) duplication in the following files: 
+Starting at line 13 of /Users/manojchappidi/Documents/Java/Polygon/src/com/hw/Triangle.java
+Starting at line 18 of /Users/manojchappidi/Documents/Java/Polygon/src/com/hw/Rectangle.java
+
+	}
+	@Override
+	public ArrayList<Point> getPoints() {
+		// TODO Auto-generated method stub
+		
+		points.add(a);
+		points.add(b);
+		points.add(c);
